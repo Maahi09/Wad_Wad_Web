@@ -1,0 +1,73 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  
+.pet-details-heading{
+font-size: 18px;
+color: #FD7E4A;
+font-weight: 600;
+}
+.detail-title , .detail-value{
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 20px
+}
+.detail-title{
+color: #252525;
+
+}
+.detail-value{
+    color: #8F9BB3;
+}
+.pet-description{
+    color:#8F9BB3 ;
+    font-size: 14px;
+    font-weight: 400;
+}
+.dog-details-wrapper{
+    gap: 50px;
+}
+.behaviour-title,.behaviour-value{
+font-size: 14px;
+font-weight:400 ;
+}
+.behaviour-title{
+color:#252525 ;
+
+}
+.behaviour-value{
+color: #8F9BB3;
+}
+.behaviour-line-img{
+    width: 90%;
+}
+.pet-prompts-completion h6{
+    font-size: 14px;
+    font-weight: 400;
+    color: #252525;
+}
+.pet-prompts-completion p{
+    color: #8F9BB3;
+    font-size: 14px;
+    font-weight: 400;
+}
+.pet-prompts-completion{
+    border: 1px dashed #D6DBDE;
+    padding: 10px;
+    margin-bottom:10px ;
+    border-radius: 4px;
+    width: 700px;
+}
+.dog-img{
+    height:190px ;
+    width: 190px;
+    border-radius: 10px;
+}

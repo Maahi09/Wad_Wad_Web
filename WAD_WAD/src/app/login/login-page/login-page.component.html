@@ -1,0 +1,51 @@
+<section class="wrapper row">
+    <!-- img section starts -->
+    <div class="img-container col-12 col-lg-6">
+        <!-- <img src="assets/images/loginPageImg.svg" alt="Login to WAD WAD" class="login-page-img img-fluid">     -->
+        <img src="assets/images/LOGO 2.svg" alt="Wad Wad Logo" class="login-page-logo img-fluid">
+    </div>
+    <!-- img section ends -->
+    <!-- form section starts -->
+    <div class="col-12 col-lg-6 form-wrapper">
+        <div class="login-form">
+            <h2 class="text-center form-heading">Login</h2>
+            <form #loginForm="ngForm" (ngSubmit)="submitLoginData(loginForm)" >
+                <!-- Email or UserName -->
+                <div class=" username-inputfield">
+                    <input type="text" placeholder="|  Email or User name" class="input-username" #username="ngModel" ngModel required  name="username" [ngClass]="{'invalid-input':username.touched && username.invalid}" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$|^[a-zA-Z0-9_]+$">
+                    <div *ngIf="username.errors && (!username?.invalid||username?.touched)">
+                        <div class="text-danger error-msg" *ngIf="username.errors['required']">Username is required</div>
+                        <div class="text-danger error-msg" *ngIf="username.errors['pattern']">Enter valid email</div>
+                      </div>
+                </div>
+                <!-- Email or UserName -->
+                <!-- Password -->
+                <div class="mt-5 password-inputfield">
+                    <input [type]="changeType?'password':'text' " placeholder="|  Password " class="input-password" #password="ngModel" ngModel required  name="password" [ngClass]="{'invalid-input':password.touched && password.invalid}" > 
+                    <span class="password-toggle" id="passwordToggle" (click)="showpassword()">
+                      <i [ngClass]= "visible? 'fa-regular fa-eye' : 'fa-regular fa-eye-slash'"></i> 
+                      </span>
+                      <div *ngIf="password.errors && (!password?.invalid||password?.touched)">
+                        <div class="text-danger error-msg" *ngIf="password.errors['required']">Password is required</div>
+                        <div class="text-danger error-msg" *ngIf="password.errors['pattern']"> Password must include at least one uppercase letter, one lowercase letter, one digit, and one special character.</div>
+                      </div>
+                </div>
+                <!-- Password -->
+                <!-- checkbox -->
+                <div class="mt-4 checkbox-inputfield">
+                    <input type="checkbox" id="confirmation" class="input-checkbox" ngModel required name="confirmation">
+                    <label for="confirmation">
+                        Remember me
+                    </label>
+                </div>
+                <!-- checkbox -->
+                <!-- submit button -->
+                <div class="login-btn-grp">
+                    <button type="submit"class="login-btn" [disabled]="loginForm.invalid">Login<i class="fa-solid fa-angle-right ms-1" ></i></button>
+                </div>
+                <!-- submit button -->
+            </form>
+        </div>
+    </div>
+    <!-- form section ends -->
+</section>

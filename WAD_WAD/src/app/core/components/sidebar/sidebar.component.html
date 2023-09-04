@@ -1,0 +1,24 @@
+
+<aside class="sidebar-container">
+<section class="sidebar">
+    <img src="assets/images/LOGO 2.svg" alt="" class="wad-wad-logo">
+    <div class="menu-icons ">
+        <img src="assets/images/background-sidebar.svg" alt="" class="background-img">
+        <div class="sidebar-imgs-grp d-flex flex-column">
+            
+           <ul>
+            <li class="sidebar-list"><a routerLink="dashboard" class="list-links"> <span routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="icon-Category sidebar-img"  (click)="openDashboard()"></span></a></li>
+            <li class="sidebar-list"><a routerLink="owners"  class="list-links"> <span class="icon icon-Owner sidebar-img" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'isActive':commonService.ownerActive}" (click)="openOwnersList()"></span></a></li>
+            <li class="sidebar-list"><a routerLink="walkers"  class="list-links"><span class="icon icon-User sidebar-img" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{'isActive':commonService.walkerActive}" (click)="openWalkersList()"></span></a></li>
+            <li class="sidebar-list"><a routerLink="reports"  class="list-links"><span class="icon icon-ic_round-report sidebar-img" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="openReportList()"></span></a></li>
+           </ul>
+           
+           
+            
+            
+            
+        </div>
+    </div>
+    <img src="assets/images/Upload.svg" alt="" class="logout-logo" (click)="logOut()">
+</section>
+</aside>

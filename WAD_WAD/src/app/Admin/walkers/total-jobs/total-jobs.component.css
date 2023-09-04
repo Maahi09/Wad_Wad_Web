@@ -1,0 +1,54 @@
+.card{
+    height: 400px;
+    width: 520px;
+    padding: 10px ;
+    border: 1px solid #F4F5F7;
+}
+.fa-circle-dot{
+    color: #FD7E4A;
+}
+.fa-star{
+    color: #B9C2CD;
+    margin-right:4px 
+}
+.active{
+    color: #FD7E4A;
+}
+.fa-star:active{
+    color: #FD7E4A;
+}
+.fa-circle-dot , .fa-star{
+    font-size: 12px;
+}
+.value{
+    color: #8F9BB3;
+    font-weight: 400;
+}
+.name{
+    color: #252525;
+    font-weight: 500;
+}
+.value, .name{
+    font-size: 16px;
+    
+}
+.review h5{
+    color: #FD7E4A;
+    font-size: 16px;
+    font-weight: 500;
+}
+.review p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #8F9BB3;
+}
+.value span{
+    color: #FD7E4A;
+    font-size: 12px;
+    font-weight: 400;
+}
+.date{
+    color: #8F9BB3;
+    font-size: 16px;
+    font-weight: 400;
+}

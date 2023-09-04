@@ -1,0 +1,28 @@
+<div class="card" (click)="openJobInDetail(jobDetails.jobId)">
+<!-- Date and Ratings -->
+<div class="d-flex  justify-content-between">
+    <div class=" date"><i class="fa-solid fa-circle-dot me-2"></i>03/10/23</div>
+    <div><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+</div>
+<!-- Date and Ratings -->
+<!-- Decription div -->
+<div class="row description">
+    <div class="col-4 name">
+        <div class="mt-3" *ngFor="let item of jobDetails | keyvalue ">
+                {{item.key}}:
+            </div>
+        
+    </div>
+    <div class="col-8 value">
+        <div class="mt-3" *ngFor="let item of jobDetails | keyvalue ">{{item.value}}</div>
+        
+    </div>
+</div>
+<!-- Decription div -->
+<!-- Review div -->
+<div class="review mt-4">
+    <h5>Review</h5>
+    <p>Lorem ipsum dolor sit amet consectetur. Dignissim mauris sem gravida porttitor tellus nisl. Mi suscipit convallis blandit nunc ut enim facilisis ut.</p>
+</div>
+<!-- Review div -->
+</div>

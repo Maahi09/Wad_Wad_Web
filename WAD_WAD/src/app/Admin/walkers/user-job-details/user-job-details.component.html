@@ -1,0 +1,10 @@
+<section class="user-job-details-wrapper">
+    <h5 class=""><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">Total Jobs</h5>
+    <div class="d-flex flex-wrap ">
+        <div class=" total-jobs mt-3 me-3"  *ngFor="let job of totalJobs">
+            <app-total-jobs [jobDetails]="job"></app-total-jobs> 
+    </div>
+    </div>
+</section>
+
+

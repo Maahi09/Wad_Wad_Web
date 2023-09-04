@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.body {
+  font-family: "Poppins", sans-serif;
+}
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.img-container {
+  background-image: url("src/assets/images/loginPageImg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.login-page-logo {
+  transform: translate(20%,40%);
+}
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-form {
+  height: 460px;
+  width: 420px;
+}
+.input-username,
+.input-password {
+  border: none;
+  border-bottom: 1px solid #b9c2cd;
+  width: 100%;
+  padding: 10px;
+}
+.input-username::placeholder{
+  background-image: url('src/assets/images/Profile.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.input-password::placeholder{
+  background-image: url('src/assets/images/Lock.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.input-username::placeholder,
+.input-password::placeholder {
+  color: #b9c2cd;
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 30px;
+}
+.password-inputfield{
+    position: relative;
+}
+.password-toggle{
+    position: absolute;
+    top: 10px;
+  right: 10px;
+  color: #B9C2CD; 
+}
+.form-heading {
+  color: #f55d4b;
+  font-size: 30px;
+  font-weight: 800;
+}
+.username-inputfield {
+  margin-top: 70px;
+}
+[type='checkbox']{
+ opacity: 0;
+}
+[type='checkbox'] + label{
+  position: relative;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+[type='checkbox'] + label::before{
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  outline: 1px solid #F55D4B;
+}
+[type='checkbox']:checked + label::after{
+  content: "";
+  position: absolute;
+  left: -31px;
+    top: 1px;
+    width: 17px;
+    height: 17px;
+  background-image: url('src/assets/images/images.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.checkbox-inputfield label {
+  transform: translate(10px, -5px);
+  color: #b9c2cd;
+  font-size: 14px;
+  font-weight: 400;
+}
+.login-btn{
+    border: none;
+    padding: 8px 30px;
+    background: linear-gradient(91.94deg, #FD7E4A 0%, #F55D4B 100%);
+    color: #ffff;
+    border-radius: 40px;
+    font-size: 14px;
+    box-shadow: 0px 4px 10px 0px #FD7E4A66;
+
+}
+.login-btn-grp{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.error-msg{
+  font-size: 12px;
+  margin-top: 5px;
+}
+.invalid-input{
+  border: 1px solid red;
+  border-radius: 5px;
+}

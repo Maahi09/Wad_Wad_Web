@@ -1,0 +1,54 @@
+:host{
+    overflow: auto;
+}
+.job-details-wrapper{
+    background-color: #ffff;
+    border-radius: 20px; 
+    padding: 25px 30px 30px 20px;
+}
+.pet-information-title{
+    font-weight: 500;
+    font-size: 16px;
+    color: #252525;
+}
+.pet-information-value , .location p , .review p{
+    font-weight: 400;
+    font-size: 16px;
+    color: #8F9BB3;   
+}
+.dog-name{
+    font-size: 16px;
+    font-weight: 600;
+    color: #252525;
+}
+.fa-star{
+    font-size: 12px;
+    margin-right: 3px;
+    color: #B9C2CD;
+}
+ .active{
+    color: #FD7E4A;
+}
+.pet-walker-details h5{
+    color: #FD7E4A;
+    font-size: 18px;
+    font-weight: 600;
+}
+.pet-details-title ,.walker-details-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #252525;
+}
+.pet-details-values , .walker-details-value{
+    font-size: 16px;
+    font-weight: 400;
+    color: #8F9BB3;
+}
+.pet-timings{
+    gap: 100px;
+}
+.pet-imgs{
+    height: 190px;
+    width: 190px;
+    border-radius: 10px;
+}

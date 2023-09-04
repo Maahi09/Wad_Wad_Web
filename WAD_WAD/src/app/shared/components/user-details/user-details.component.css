@@ -1,0 +1,131 @@
+
+.wrapper{
+    background-color:#ffff;
+    border-radius: 20px   ;
+    padding: 30px 0px 0px 20px;
+}
+.user-profile h6{
+    font-size: 22px;
+    font-weight: 600;
+    color: #252525;
+}
+.user-details-title{
+    color: #FD7E4A;
+    font-weight:600 ;
+    font-size: 18px;
+}
+.data-name,.data-value{
+padding: 10px 0px 10px 0px;
+font-size: 14px;
+font-weight: 400;
+}
+.data-name{
+    color: #252525;
+}
+.data-value{
+    color: #8F9BB3;
+}
+.user-details-border-bottom{
+    border-bottom: 1px solid #D6DBDE;
+}
+.user-profile-wrapper{
+    margin-top: 35px;
+}
+.user{
+    margin-bottom: 20px;
+}
+.dog-brief{
+    background-color: #F9F9F9;
+    border-radius: 10px;
+}
+.dog-details-wrapper{
+    padding: 20px 20px 20px 0px;
+}
+.dog-detail-btn{
+    background-color: #F9F9F9;
+}
+.walker-details h5 ,.user-prompts h5 , .user-photo h5{
+color: #FD7E4A;
+font-size: 18px;
+font-weight: 600;
+}
+.walker-details p{
+    color: #8F9BB3;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 20px;
+}   
+.user-prompts-completion{
+    border: 1px dashed #D6DBDE;
+    padding: 10px;
+    margin-bottom:10px ;
+    border-radius: 4px;
+    width: 700px;
+}
+.user-prompts-completion h6 , .user-prompts-completion p{
+    font-size: 14px;
+    font-weight: 400;
+}
+.user-prompts-completion h6{
+color: #252525;
+}
+.user-prompts-completion p{
+    color: #8F9BB3;
+}
+.walker-details-wrapper{
+    padding: 20px 20px 20px 0px;
+}
+.prompts-completion{
+    gap: 20px;
+}
+.reports-title{
+    color: #FD7E4A;
+font-size: 18px;
+font-weight: 600;
+}
+.report-description p{
+font-size: 14px;
+font-weight: 400;
+color: #8F9BB3;
+}
+.profile-img{
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+}
+.walker-id-card{
+    height:200px ;
+    width: 330px;
+    border-radius: 20px;
+}
+.walker-imgs{
+    height: 190px;
+    width: 190px;
+    border-radius: 10px;
+}
+.accordion-item {
+    border: none
+}
+.accordion-body {
+    padding: 0 0 10px 0
+}
+.accordion-button::after {
+    background-image: url('src/assets/images/Arrow - Down -grey.svg'); 
+}
+.accordion-button:not(.collapsed) {
+    box-shadow: none;
+}
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.accordion-button:focus {
+    z-index: 1;
+    border-color: none;
+    box-shadow: none;
+}

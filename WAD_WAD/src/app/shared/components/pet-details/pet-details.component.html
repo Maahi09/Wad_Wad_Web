@@ -1,0 +1,82 @@
+<!-- dog-details wrapper starts -->
+<section class="dog-details-wrapper">
+<!-- Pet Details and description div starts -->
+<div class="row mt-4 mb-5">
+    <!-- Pet Details -->
+    <div class="col-6">
+        <h5 class="pet-details-heading"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">Pet’s Details</h5>
+
+        <div class="row">
+<div class="col-3">
+    <div class="detail-title" *ngFor="let data of petDetails | keyvalue" >{{data.key}} </div>
+</div>
+<div class="col-9">
+    <div  class="detail-value" *ngFor="let data of petDetails | keyvalue">{{data.value}}</div>  </div>
+        </div>
+    </div>
+    <!-- Pet Details -->
+    <!-- Pet Description -->
+    <div class="col-6">
+        <h5 class="pet-details-heading"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1" >Pet’s Description</h5>
+        <p class="pet-description mt-3">{{petInfo?.PetDescription}}</p>
+    </div>
+    <!-- Pet Description -->
+</div>
+<!-- Pet Details and description div ends -->
+<!-- Pet's Behaviour div starts -->
+<div class="mb-5">
+    <h5 class="pet-details-heading "><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">Pet’s Behaviors</h5>
+    <!-- <div  class="pet-behaviour d-flex align-items-center justify-content-between">
+        <div class="d-flex flex-column mt-1">
+            <div class="behaviour-title mt-3" *ngFor="let data of petBehaviour | keyvalue">{{data.key}}<img src="assets/images/Line 5.svg" alt="Line" class="behaviour-line-img ms-3 me-3"></div>
+        </div>
+        <div class="d-flex flex-column">
+            <div class="behaviour-value mt-3" *ngFor="let data of petBehaviour | keyvalue">{{data.value}}</div>
+        </div>
+        
+    </div> -->
+
+
+    <div  class="pet-behaviour row">
+        <div class="col-11 mt-1">
+            <div class="behaviour-title mt-3" *ngFor="let data of petBehaviour | keyvalue">{{data.key}}<img src="assets/images/Line 5.svg" alt="Line" class="behaviour-line-img ms-3 me-3"></div>
+        </div>
+        
+        <div class="col-1">
+            <div class="behaviour-value mt-3" *ngFor="let data of petBehaviour | keyvalue">{{data.value}}</div>
+        </div>
+        
+    </div>
+</div>
+<!-- Pet's Behaviour div ends -->
+<!-- Pet's Photos div starts -->
+<div class="mb-5">
+    <h5 class="pet-details-heading"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">Pet’s Photos</h5>
+   <div class="d-flex flex-wrap">
+    <div class="mt-4" *ngFor="let img of petInfo?.images">
+        <img src="{{img}}" alt="Dog photo" class="me-3 dog-img">
+    </div>
+   </div>
+    
+</div>
+<!-- Pet's Photos div ends -->
+<!-- Pet's Prompts and Completion div starts -->
+<div class="">
+    <h5 class="pet-details-heading"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">Pet’s Prompts and Completions</h5>
+    <div class="mt-4 d-flex align-items-center flex-wrap">
+        
+            <div class="pet-prompts-completion me-3 " *ngFor="let data of petInfo?.PromptDetails" >
+                <div *ngFor="let item of data | keyvalue">
+                    <h6>{{item.key}}</h6>
+                    <p class="mt-2">{{item.value}}</p>
+                </div>
+                
+            </div>
+        
+        
+    </div>
+    
+</div>
+<!-- Pet's Prompts and Completion div ends -->
+</section>
+<!-- dog-details wrapper ends -->

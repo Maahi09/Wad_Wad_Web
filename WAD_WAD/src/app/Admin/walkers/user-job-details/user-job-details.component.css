@@ -1,0 +1,9 @@
+.user-job-details-wrapper{
+    color: #FD7E4A;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 30px 25px 25px 25px;
+}
+.total-jobs{
+    gap: 10px;
+}

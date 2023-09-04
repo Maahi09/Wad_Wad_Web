@@ -1,0 +1,165 @@
+<!-- Wrapper starts -->
+<section class="wrapper">
+    <!-- User-Details section starts -->
+    <section class="row user-details-wrapper gx-5" [ngClass]="{'user-details-border-bottom':ownerDogsDetails }">
+        <div class="col-6 user">
+            <!-- Only for Report details  -->
+            <div *ngIf="reportDetails">
+                <h5 class="mb-3 reports-title"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">Report User
+                </h5>
+            </div>
+            <!-- Only for Report details  -->
+            <!-- For user details -->
+            <div class="user-profile">
+               
+                <img src="{{userDetails?.Profile}}" alt="Profile Image" class="mb-4 profile-img">
+                <h6>{{userDetails?.Name}}</h6>
+            </div>
+            <div class="user-profile-wrapper">
+                <h5 class="user-details-title"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">User Details
+                </h5>
+
+                <div class="row">
+                    <div class="col-3">
+                        <div class="data-name" *ngFor="let item of updatedUserDetails | keyvalue">{{item.key}}</div>
+                    </div>
+                    <div class="col-9">
+                        <div class="data-value" *ngFor="let item of updatedUserDetails | keyvalue">{{item.value}}</div>
+                    </div>
+                </div>  
+            </div>
+            <!-- For user details -->
+            <!-- Only for Report details -->
+<div *ngIf="reportDetails">
+    <div class="report-description mt-5">
+        <h5 class="mb-3 reports-title"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">Reason for Report
+        </h5>
+<p>Lorem ipsum dolor sit amet consectetur. Dolor nullam accumsan amet mauris consectetur sed nisi. Sed nullam magnis arcu magna sed condimentum adipiscing at.</p>
+    </div>
+    
+</div>
+            <!-- Only for Report details -->
+        </div>
+       
+        <div class="col-6 ">
+             <!--Only for Walker-details -->
+            <div class="walker-details" *ngIf="walkersDetails">
+                <div class="mt-5">
+                    <h5><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">Description</h5>
+                    <p>{{userDetails?.AboutSelf}}</p>
+                </div>
+                <div class="mt-5">
+                    <h5><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">User Id Card</h5>
+                    <img src="{{userDetails?.IdCardImage}}" alt="Walker Id Card" class="mt-3 walker-id-card">
+                </div>
+            </div>
+             <!-- Only for Walker-details -->
+<!-- Reports details -->
+             <div  *ngIf="reportDetails">
+                <h5 class="mb-3 reports-title"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">Report By
+                </h5>
+                <!-- reported by Profile -->
+                <div class="user-profile">
+                    <img src="assets/images/Rectangle 15.svg" alt="Profile Image" class="mb-4 ">
+                    <h6>Lara Patel</h6>
+                </div>
+<!-- reported by Profile -->
+<!-- reported by Details -->
+                <div class="user-profile-wrapper">
+                    <h5 class="user-details-title"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">User Details
+                    </h5>
+    
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="data-name">Email</div>
+                            <div class="data-name">Phone Number</div>
+                            <div class="data-name">Gender</div>
+                            <div class="data-name">Role</div>
+                            <div class="data-name">Address</div>
+                        </div>
+                        <div class="col-9">
+                            <div class="data-value">abc@gmail.com</div>
+                            <div class="data-value">+1 12345 67891</div>
+                            <div class="data-value">Male</div>
+                            <div class="data-value">Owner</div>
+                            <div class="data-value">Lorem ipsum dolor sit amet consectetur. Vulputate nec ultricies vitae
+                                id. - 395004</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- reported by Details -->
+                <!-- reported by Description -->
+                <div class="report-description mt-5">
+                    <h5 class="mb-3 reports-title"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">Description
+                    </h5>
+<p>Lorem ipsum dolor sit amet consectetur. Dolor nullam accumsan amet mauris consectetur sed nisi. Sed nullam magnis arcu magna sed condimentum adipiscing at.</p>
+                </div>
+                
+                <!-- reported by Description -->
+             </div>
+             <!-- Reports details -->
+
+        </div>
+       
+    </section>
+    <!-- User-Details section ends -->
+    <!-- Pet-Details section starts -->
+    <section  *ngIf="ownerDogsDetails">
+        <div ngbAccordion [closeOthers]="true" class="dog-details-wrapper">
+            <div ngbAccordionItem class="d-flex flex-column  " *ngFor="let dog of petDetails" >
+                <div ngbAccordionHeader class="d-flex justify-content-between dog-brief mb-3">
+                            <div class="d-flex align-items-center ms-2">
+                                <!-- <img src="assets/images/dog-bruno.svg" alt="Bruno Profile Image"> -->
+                                <span class="ms-3">{{dog.Name}}</span>
+                            </div>
+                            <div>
+                                <button ngbAccordionButton (click)="openDogDetails(dog?.PetId)"  class="dog-detail-btn"></button>
+                            </div>
+                </div>
+                <div ngbAccordionCollapse>
+                    <div ngbAccordionBody>
+                        <ng-template>
+                            <app-pet-details [petInformation]="singlePetDetails" ></app-pet-details>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pet-Details section ends -->
+    <!-- Walker-details -->
+    <section class="walker-details-wrapper" *ngIf="walkersProfile">
+        <!-- User-photos only for walker -->
+        <div class="user-photo">
+            <h5><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">User Photos</h5>
+            <div class="d-flex flex-wrap ">
+                <div class="mt-3 me-3" *ngFor="let img of userDetails.Images">
+                    <img src="{{img}}" alt="" class=" walker-imgs">
+                </div>
+            </div>
+            
+        </div>
+         <!-- User-photos only for walker -->
+         <!-- User Prompts and Completions -->
+        <div class="user-prompts mt-5">
+            <h5 class=""><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">User Prompts and Completions</h5>
+            <div class="mt-4 d-flex align-items-center flex-wrap prompts-completion">
+                    <div class="user-prompts-completion " *ngFor=" let data of walkerPromptDetails" >
+                        <!-- <div class="d-flex align-items-center justify-content-around"> -->
+                            <div *ngFor="let item of data | keyvalue" >
+                                <h6> {{item.key}}</h6>
+                                <p class="mt-2">{{item.value}}</p>
+                               </div>
+                        <!-- </div> -->
+                    </div>
+                    
+            </div>
+        </div>
+         <!-- User Prompts and Completions -->
+    </section>
+    <!-- Walker-details -->
+
+    
+
+</section>
+<!-- Wrapper ends -->

@@ -1,0 +1,25 @@
+<div class="d-flex">
+    <header class="header-container">
+        <div *ngIf="!titleService.toggleTitle">
+            <!-- <h2 class="dasboard-heading">{{titleOwners?'Owners':(titleWalkers?'Walkers':(titleReport?'Report':'Dashboard'))}}</h2>  -->
+            <h2 class="dasboard-heading">{{titleService.headerTitle}}</h2> 
+            <p class="dasboard-sub-heading" *ngIf="titleService.titleDashboard">Welcome, User name!</p>
+        </div>
+        <div class="d-flex align-items-center" *ngIf="titleService.toggleTitle">
+                <div class="back-arrow"> 
+                    <button class="border-0 back-btn">
+                        <img src="assets/images/Arrow---Left.svg" alt="" (click)="navigateToList()">
+                    </button>
+            </div>
+            <!-- <div class="ms-2">{{titleOwners?'Owners':(titleWalkers?'Walkers':'Report')}}</div> -->
+            <div class="ms-2">{{titleService.headerTitle}}</div>
+        </div>
+        <div class="d-flex align-items-center">
+            <input type="text" placeholder="Search here..." class="search me-2">
+            <div class="notification-wrapper">
+                <img src="assets/images/notification.svg" alt="" (click)="openNotificationsList()">
+            </div>
+        </div>
+        <app-notifications *ngIf="openNotifications"></app-notifications>
+</header>
+</div>
