@@ -1,0 +1,41 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-grow: 1;
+}
+.wrapper{
+    background-color:#ffff;
+    border-radius: 20px   ;
+}
+.details-heading{
+    gap: 40px;
+    padding: 20px 0px 0px 25px;
+    border-bottom: 1px solid #D6DBDE;
+}
+.main-content{
+    overflow: auto;
+    overflow-x: hidden;
+}
+.active {
+    color:#FD7E4A;
+    border-bottom: 2px solid #FD7E4A;
+}
+.links{
+    color:#8F9BB3;
+    font-size:16px;
+    font-weight: 400;
+    cursor: pointer;
+    
+}
+.is-active{
+    color: #FD7E4A;
+    padding-bottom: 15px;
+    border-bottom-style: solid;
+}
+.disabled{
+  pointer-events: none;  
+}
+.user-job-details{
+    cursor: not-allowed;
+  }
