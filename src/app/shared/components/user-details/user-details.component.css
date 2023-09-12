@@ -2,7 +2,7 @@
 .wrapper{
     background-color:#ffff;
     border-radius: 20px   ;
-    padding: 30px 0px 0px 20px;
+    padding: 27px 0px 0px 20px;
 }
 .user-profile h6{
     font-size: 22px;
@@ -29,7 +29,7 @@ font-weight: 400;
     border-bottom: 1px solid #D6DBDE;
 }
 .user-profile-wrapper{
-    margin-top: 35px;
+    margin-top: 30px;
 }
 .user{
     margin-bottom: 20px;
@@ -39,10 +39,15 @@ font-weight: 400;
     border-radius: 10px;
 }
 .dog-details-wrapper{
-    padding: 20px 20px 20px 0px;
+    padding: 25px 20px 20px 0px;
 }
 .dog-detail-btn{
     background-color: #F9F9F9;
+}
+.dog-name{
+    color: #8F9BB3;
+    font-size: 16px;
+    font-weight: 600;
 }
 .walker-details h5 ,.user-prompts h5 , .user-photo h5{
 color: #FD7E4A;
@@ -73,10 +78,10 @@ color: #252525;
     color: #8F9BB3;
 }
 .walker-details-wrapper{
-    padding: 20px 20px 20px 0px;
+    padding: 0px 20px 20px 0px;
 }
 .prompts-completion{
-    gap: 20px;
+    gap: 10px;
 }
 .reports-title{
     color: #FD7E4A;
@@ -116,16 +121,16 @@ color: #8F9BB3;
     box-shadow: none;
 }
 .accordion-item:first-of-type .accordion-button {
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
 }
 .accordion-item:last-of-type .accordion-button.collapsed {
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
 }
 .accordion-button:focus {
     z-index: 1;
     border-color: none;
     box-shadow: none;
+}
+.accordion-button {
+    padding: 0px 15px 0px 15px;
 }

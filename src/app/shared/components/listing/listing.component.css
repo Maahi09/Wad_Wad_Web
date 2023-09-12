@@ -16,7 +16,6 @@
     height: 735px;
     background-color: #ffff;
     border-radius: 20px; 
-    
 }
 .table-heading{
     padding: 20px 0px 0px 20px;
@@ -49,4 +48,10 @@
 .details-btn{
     border: none;
     background-color: #ffff;
+}
+.table td{
+    cursor: pointer;
+}
+.no-data-found{
+    color:#8F9BB3;
 }

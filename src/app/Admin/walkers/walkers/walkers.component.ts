@@ -22,7 +22,7 @@ export class WalkersComponent {
   //method to get total-walkers
   getTotalWalkers() {
     this.walkersService.getWalkers().subscribe((res: walkers) => {
-      this.walkersList = res?.data?.totalWalker;
+      this.walkersList = res?.data?.totalWalkers;
       this.titleService.headerTitle = 'Walkers';
       this.titleService.titleDashboard = false;
       this.titleService.toggleTitle = false;

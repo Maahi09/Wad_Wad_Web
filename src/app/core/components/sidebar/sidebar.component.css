@@ -52,11 +52,13 @@
     width: 60px;
     height: 20px;
     margin: 20px;
+    cursor: pointer;
   }
   .logout-logo{
     height: 35px;
     width: 35px;
     margin: 0px 0px 50px 30px;
+    cursor: pointer;
   }
   .list-links{
     text-decoration: none;

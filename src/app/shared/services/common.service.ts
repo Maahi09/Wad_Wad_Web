@@ -15,5 +15,6 @@ public petDetailsId = new BehaviorSubject(0)
 public ownerActive =  false
 public walkerActive = false
 public isActive:boolean = true
+public searchData = new BehaviorSubject({})
 constructor() { }
 }

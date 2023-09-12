@@ -7,7 +7,6 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { PetDetailsComponent } from './components/pet-details/pet-details.component';
 import { UserDetailsUserJobDetailsComponent } from './components/user-details-user-job-details/user-details-user-job-details.component';
 import { RouterModule } from '@angular/router';
-import { CommonService } from './services/common.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 

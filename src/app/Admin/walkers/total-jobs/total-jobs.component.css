@@ -1,6 +1,6 @@
 .card{
-    height: 400px;
-    width: 520px;
+    
+    width: 450px;
     padding: 10px ;
     border: 1px solid #F4F5F7;
 }
@@ -8,7 +8,6 @@
     color: #FD7E4A;
 }
 .fa-star{
-    color: #B9C2CD;
     margin-right:4px 
 }
 .active{
@@ -51,4 +50,10 @@
     color: #8F9BB3;
     font-size: 16px;
     font-weight: 400;
+}
+.filled{
+    color: #FD7E4A;
+}
+.notfilled{
+    color: #B9C2CD;
 }

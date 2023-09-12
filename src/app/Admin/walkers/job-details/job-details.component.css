@@ -24,10 +24,7 @@
 .fa-star{
     font-size: 12px;
     margin-right: 3px;
-    color: #B9C2CD;
-}
- .active{
-    color: #FD7E4A;
+    
 }
 .pet-walker-details h5{
     color: #FD7E4A;
@@ -51,4 +48,10 @@
     height: 190px;
     width: 190px;
     border-radius: 10px;
+}
+.filled{
+    color: #FD7E4A;
+}
+.notfilled{
+    color: #B9C2CD;
 }

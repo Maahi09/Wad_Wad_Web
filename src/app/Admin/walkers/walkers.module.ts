@@ -7,6 +7,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { UserJobDetailsComponent } from './user-job-details/user-job-details.component';
 import { TotalJobsComponent } from './total-jobs/total-jobs.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { JobDetailsComponent } from './job-details/job-details.component';
   imports: [
     CommonModule,
     WalkersRoutingModule,
-    SharedModule
+    SharedModule,
+    NgbModule,
+    GoogleMapsModule
   ]
 })
 export class WalkersModule { }

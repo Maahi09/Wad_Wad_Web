@@ -45,6 +45,24 @@
         <div class="col-1">
             <div class="behaviour-value mt-3" *ngFor="let data of petBehaviour | keyvalue">{{data.value}}</div>
         </div>
+
+
+
+
+       <!-- <div class="d-flex align-items-center">
+            <div class="col-11 mt-1 word ">
+                <div class="behaviour-title mt-3" *ngFor="let data of petBehaviour | keyvalue">{{data.key}}<img src="assets/images/Line 5.svg" alt="Line" class="behaviour-line-img ms-3 me-3"></div>
+            </div>
+            
+            <div class="col-1 word">
+                <div class="behaviour-value mt-3" *ngFor="let data of petBehaviour | keyvalue">{{data.value}}</div>
+            </div>
+        </div>  -->
+        <!-- <div class="d-flex align-items-center">
+            <div class="flex-item"><div class="behaviour-title mt-3" *ngFor="let data of petBehaviour | keyvalue">{{data.key}}</div></div>
+            <div class="line"></div> 
+            <div class="flex-item"><div class="behaviour-value mt-3" *ngFor="let data of petBehaviour | keyvalue">{{data.value}}</div></div>
+          </div> -->
         
     </div>
 </div>
@@ -70,12 +88,8 @@
                     <h6>{{item.key}}</h6>
                     <p class="mt-2">{{item.value}}</p>
                 </div>
-                
             </div>
-        
-        
     </div>
-    
 </div>
 <!-- Pet's Prompts and Completion div ends -->
 </section>

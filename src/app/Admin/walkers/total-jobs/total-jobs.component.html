@@ -2,7 +2,15 @@
 <!-- Date and Ratings -->
 <div class="d-flex  justify-content-between">
     <div class=" date"><i class="fa-solid fa-circle-dot me-2"></i>{{walkerJobDetails.CreatedAt}}</div>
-    <div><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star active"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+    <div>
+        <ngb-rating  [rate]="walkerJobDetails.ownerRate" [max]="5" [readonly]="true">
+            <ng-template let-fill="fill" >
+              <span [class.filled]="fill === 100" [class.notfilled]="fill === 0">
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </ng-template>
+          </ngb-rating>
+    </div>
 </div>
 <!-- Date and Ratings -->
 <!-- Decription div -->
@@ -20,9 +28,9 @@
 </div>
 <!-- Decription div -->
 <!-- Review div -->
-<!-- <div class="review mt-4">
+<div class="review mt-4">
     <h5>Review</h5>
-    <p>Lorem ipsum dolor sit amet consectetur. Dignissim mauris sem gravida porttitor tellus nisl. Mi suscipit convallis blandit nunc ut enim facilisis ut.</p>
-</div> -->
+    <p>{{walkerJobDetails.ownerReview}}</p>
+</div>
 <!-- Review div -->
 </div>

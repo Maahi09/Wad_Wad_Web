@@ -66,9 +66,8 @@ export class UserDetailsComponent {
         this.updatedOwnerDetails = { ...this.ownerDetails };
         delete this.updatedOwnerDetails.Name;
         delete this.updatedOwnerDetails?.Profile;
+        delete this.updatedOwnerDetails?.userId;
         this.petDetails = res.data?.petsDetails;
-        // res.data?.petsDetails.forEach((item:any)=>this.petId = item.PetId);
-        this.commonService.petDetails.next(this.petDetails);
         this.bindUserDetails = true;
         this.walkersDetails = false;
         this.walkersProfile = false;
@@ -92,6 +91,7 @@ export class UserDetailsComponent {
         delete this.updatedWalkerDetails.AboutSelf;
         delete this.updatedWalkerDetails.IdCardImage;
         delete this.updatedWalkerDetails.Images;
+        delete this.updatedWalkerDetails.userId;
         this.bindUserDetails = false;
         this.walkersDetails = true;
         this.walkersProfile = true;

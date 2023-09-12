@@ -8,8 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class LoginService {
 
-  constructor(private httpClient:HttpClient) { }
-public url = environment.BASE_URL
+constructor(private httpClient:HttpClient) { }
 //method to post login data
 adduser(loginData:any){
   return this.httpClient.post(`Admin/Login`,loginData)

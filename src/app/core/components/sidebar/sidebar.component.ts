@@ -23,12 +23,10 @@ export class SidebarComponent {
     this.commonService.walkerActive = true;
   }
   openDashboard() {
-    this.router.navigate(['dashboard']);
     this.titleService.headerTitle = 'Dashboard';
     this.titleService.toggleTitle = false;
   }
   openReportList() {
-    this.router.navigate(['reports']);
     this.titleService.headerTitle = 'Reports';
     this.commonService.ownerActive = false;
     this.commonService.walkerActive = false;

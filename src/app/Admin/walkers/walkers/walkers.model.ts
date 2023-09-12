@@ -1,7 +1,7 @@
 export class walkers{
     code?: number;
     data?: {
-        totalWalker?: [
+        totalWalkers?: [
             {
                 userId?: string,
                 firstName?: string,

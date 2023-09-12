@@ -19,6 +19,7 @@ export class TotalJobsComponent {
     delete this.updatedWalkerJobDetails.CreatedAt;
     delete this.updatedWalkerJobDetails.ownerRate;
     delete this.updatedWalkerJobDetails.jobId;
+    delete this.updatedWalkerJobDetails.ownerReview;
   }
   public openJobInDetail(jobId: number) {
     this.router.navigate(['job-details', jobId]);

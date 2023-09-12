@@ -10,14 +10,14 @@
             <th class="data-titles">User Email</th>
             <th class="data-titles">Phone Number</th>
             </thead>
-            <tbody>
+            <tbody *ngIf="!noDataFound">
                 <tr *ngFor="let data of displayList ;let i=index ">
-                    <td class="table-data">{{i+1}}</td>
-                    <td class="table-data">
+                    <td class="table-data" (click)="openUserDetails(data.userId)">{{i+1}}</td>
+                    <td class="table-data" (click)="openUserDetails(data.userId)">
                         <!-- <img src="assets/images/listing-img.svg" alt="" class="me-2"> -->
                         {{data.firstName + data.lastName}}</td>
-                    <td class="table-data">{{data.email}}</td>
-                    <td class="table-data">{{data.phoneNumber}}</td>
+                    <td class="table-data" (click)="openUserDetails(data.userId)">{{data.email}}</td>
+                    <td class="table-data" (click)="openUserDetails(data.userId)">{{data.phoneNumber}}</td>
                     <td class="table-data">
                     <button type="button" class="details-btn">
                         <img src="assets/images/table-last-column.png" alt="" (click)="openUserDetails(data.userId)">
@@ -25,9 +25,13 @@
                     </td>
                 </tr>
             </tbody>
+            
             <tfoot>
             </tfoot>
                 </table>
+                <div *ngIf="noDataFound" class="d-flex justify-content-center align-items-center flex-grow-1 mt-5 p-5">
+                    <h2 class="no-data-found">No Record Found</h2> 
+                 </div>
     </div>
    
 </div>

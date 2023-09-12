@@ -18,9 +18,6 @@ import { NotificationsComponent } from './components/notifications/notifications
   imports: [
     CommonModule,
     RouterModule
-  ],
-  // providers:[
-  //   PermissionsService
-  // ]
+  ]
 })
 export class CoreModule { }

@@ -14,11 +14,13 @@ export class JobDetailsComponent {
   public jobId: any;
   public petDetails: any;
   public petInfo: petInfo | undefined;
-  public walkerData: walkerData | undefined;
+  public walkerData: any ;
   updatedPetInfo: any;
   updatedWalkerData: any
   ownerReview: any;
   walkerReview: any;
+  public lat:number=0;
+  public long:number=0;
   constructor(
     private walkersService: WalkersService,
     private activatedRoute: ActivatedRoute,
@@ -54,6 +56,16 @@ export class JobDetailsComponent {
       this.titleService.headerTitle = 'Walkers';
       this.commonService.walkerActive = true;
       this.titleService.toggleTitle=true; 
+      this.lat  = res?.data?.WalkerData.Lat;
+      this.long = res?.data?.WalkerData.Long
     });
   }
+
+  
+center: google.maps.LatLngLiteral = {
+    lat: this.lat,
+    lng: this.long
+};
+
+      
 }

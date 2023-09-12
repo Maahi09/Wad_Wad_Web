@@ -16,6 +16,11 @@ export class WalkersService {
   getWalkers(){
     return this.httpClient.get('UserData/Walkers')
   }
+
+  //method for getting searched-walkers
+  getSearchedWalkers(value:any){
+    return this.httpClient.get(`UserData/Walkers?search=${value}`)
+  }
 //method for getting walker-details
 getWalkerDetails(walkerId:number){
   return this.httpClient.get(`UserData/WalkerDetails/${walkerId}`)

@@ -15,10 +15,11 @@ export class ListingComponent {
   @Input() displayDataFromParent: any;
   @Input() isOwnerCall: boolean = false;
   public displayList: any = [];
+  public noDataFound:boolean = false
   constructor(
     private router: Router,
     public titleService: TitleService,
-    private commonService: CommonService
+    private commonService:CommonService
   ) {}
   ngOnChanges(changes: any) {
     if (changes && changes.displayDataFromParent) {
@@ -29,7 +30,23 @@ export class ListingComponent {
       }
     }
   }
+  ngOnInit(){
+    this.getSearchedData()
+  }
+  //method to open user-details page
   openUserDetails(userId: any) {
     this.router.navigate(['user-details', userId, this.isOwnerCall]);
+  }
+
+  //method to bind SearchedData
+  getSearchedData(){
+    this.commonService.searchData.subscribe((res:any)=>{this.displayList=res;
+      if(res.length===0){
+this.noDataFound = true
+      }
+      else{
+        this.noDataFound = false
+      }
+    });
   }
 }

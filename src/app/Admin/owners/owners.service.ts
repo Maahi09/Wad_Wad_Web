@@ -14,6 +14,9 @@ public ownerDetails = new BehaviorSubject({})
 getOwners(){
   return this.httpClient.get(`UserData/Owners`)
 }
+getSearchOwners(value:any){
+  return this.httpClient.get(`UserData/Owners?search=${value}`)
+}
 //method for getting owner-details
 getOwnerDetails(ownerId:number){
   return this.httpClient.get(`UserData/OwnerDetails/${ownerId}`)

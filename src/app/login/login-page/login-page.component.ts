@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../login.service';
 import { AuthService } from 'src/app/core/services/auth/auth.service';
+import { CommonService } from 'src/app/shared/services/common.service';
 
 @Component({
   selector: 'app-login-page',
@@ -13,12 +14,12 @@ export class LoginPageComponent {
   constructor(
     private router: Router,
     private loginService: LoginService,
-    private authService: AuthService
+    private authService: AuthService,
+    private commonService:CommonService
   ) {}
   public visible: boolean = true;
   public changeType: boolean = true;
   form: NgForm | undefined;
-
   //method for submitting login data
   submitLoginData(loginData: any) {
     if (loginData.valid) {
@@ -31,6 +32,7 @@ export class LoginPageComponent {
         this.authService.storeToken(authToken);
         this.router.navigate(['/dashboard']);
       });
+      sessionStorage.setItem('loggedUser',loginData.value.username)
     }
   }
   showpassword() {
