@@ -54,5 +54,6 @@ export class PetDetailsComponent {
     delete this.petBehaviour.address;
     delete this.petBehaviour.city;
     delete this.petBehaviour.PetId;
+    delete this.petBehaviour.Name;
   }
 }

@@ -36,6 +36,7 @@ export class UserJobDetailsComponent {
       this.walkersService.totalJobDetails.next(this.totalJobs);
       this.commonService.isActive = false;
       this.titleService.headerTitle = 'Walkers';
+      this.titleService.headerListTitle = 'Walker';
     });
   }
   // method to send userId and isOwnerCall

@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class TitleService {
   public headerTitle:string='Dashboard';
+  public headerListTitle:string='Owner';
   public titleDashboard:boolean = false;
   public toggleTitle:boolean =false
   constructor() { }

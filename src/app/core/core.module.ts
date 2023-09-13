@@ -5,6 +5,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { MasterComponent } from './components/master/master.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
+import { NgbModule, NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -17,7 +18,9 @@ import { NotificationsComponent } from './components/notifications/notifications
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    NgbModule,
+    NgbPopoverModule
   ]
 })
 export class CoreModule { }

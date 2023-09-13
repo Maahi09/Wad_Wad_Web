@@ -1,8 +1,8 @@
 .card{
-    
     width: 450px;
     padding: 10px ;
     border: 1px solid #F4F5F7;
+    cursor: pointer;
 }
 .fa-circle-dot{
     color: #FD7E4A;

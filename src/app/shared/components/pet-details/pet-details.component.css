@@ -69,7 +69,12 @@ color: #8F9BB3;
     border-radius: 10px;
 }
 
-.word{
-    flex: 1; /* Adjust flex properties as needed */
-    /* padding: 10px; */
+
+.line{
+    height: 1px;
+    width: 100%;
+    background-color: #D6DBDE;
+
+    display: inline-block;
 }
+

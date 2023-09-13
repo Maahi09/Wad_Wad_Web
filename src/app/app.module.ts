@@ -29,7 +29,6 @@ import { GoogleMapsModule } from '@angular/google-maps';
     CoreModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule,
     GoogleMapsModule,
   ],
   providers:[

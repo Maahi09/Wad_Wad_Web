@@ -100,6 +100,7 @@ export class UserDetailsComponent {
         this.commonService.userId.next(this.userId);
         this.commonService.disableUserJobDetails = false;
         this.titleService.headerTitle = 'Walkers';
+        this.titleService.headerListTitle = 'Walker';
         this.commonService.walkerActive = true;
       });
   }

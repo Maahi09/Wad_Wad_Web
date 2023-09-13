@@ -48,7 +48,7 @@
             <div class="col-6 ">
                 <!--Only for Walker-details -->
                 <div class="walker-details" *ngIf="walkersDetails">
-                    <div class="mt-5">
+                    <div class="mt-2">
                         <h5><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">Description</h5>
                         <p>{{userDetails?.AboutSelf}}</p>
                     </div>
@@ -161,11 +161,15 @@
             <h5 class=""><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">User Prompts and
                 Completions</h5>
             <div class="mt-4 d-flex align-items-center flex-wrap prompts-completion">
-                <div class="user-prompts-completion " *ngFor=" let data of walkerPromptDetails">
+                <div class="user-prompts-completion me-2" *ngFor=" let data of walkerPromptDetails">
                     <!-- <div class="d-flex align-items-center justify-content-around"> -->
-                    <div *ngFor="let item of data | keyvalue">
+                    <!-- <div *ngFor="let item of data | keyvalue">
                         <h6> {{item.key}}</h6>
                         <p class="mt-2">{{item.value}}</p>
+                    </div> -->
+                    <div>
+                        <h6> {{data.promptsTitle}}</h6>
+                        <p class="mb-0">{{data.PromptAnswer}}</p>
                     </div>
                     <!-- </div> -->
                 </div>

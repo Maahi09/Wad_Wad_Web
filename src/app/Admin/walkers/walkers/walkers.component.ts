@@ -24,6 +24,7 @@ export class WalkersComponent {
     this.walkersService.getWalkers().subscribe((res: walkers) => {
       this.walkersList = res?.data?.totalWalkers;
       this.titleService.headerTitle = 'Walkers';
+      this.titleService.headerListTitle = 'Walker';
       this.titleService.titleDashboard = false;
       this.titleService.toggleTitle = false;
       this.titleService.binddata.next(true);

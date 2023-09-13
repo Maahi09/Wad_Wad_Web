@@ -10,14 +10,27 @@
                         <img src="assets/images/Arrow---Left.svg" alt="" (click)="navigateToList()">
                     </button>
             </div>
-            <div class="ms-2">{{titleService.headerTitle}} List</div>
+            <div class="ms-2">{{titleService.headerListTitle}} List</div>
         </div>
         <div class="d-flex align-items-center">
             <input type="text" placeholder="Search here..." class="search me-2" (keyup)="getSearchedUser(search.value)" #search>
-            <div class="notification-wrapper">
-                <img src="assets/images/notification.svg" alt="" (click)="openNotificationsList()">
-            </div>
+                <button
+                type="button"
+                class="border-0 notification-btn"
+                placement="auto"
+                [ngbPopover]=notifications
+            >
+            <img src="assets/images/notification-icon.svg" alt="" >
+            </button>
         </div>
-        <app-notifications *ngIf="openNotifications"></app-notifications>
+    <!-- notifications    -->
+    <ng-template #notifications>
+            <div class="notifications">Lara Patel  <span class="me-1">Report to</span>Carmen Myers</div>
+            <div class="notifications">Lara Patel  <span class="me-1">Report to</span>Carmen Myers</div>
+            <div class="notifications">Lara Patel  <span class="me-1">Report to</span>Carmen Myers</div>
+    </ng-template>
+<!-- notifications    -->
+
+
 </header>
 </div>

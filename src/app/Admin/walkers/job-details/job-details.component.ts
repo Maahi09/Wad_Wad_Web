@@ -54,6 +54,7 @@ export class JobDetailsComponent {
       this.ownerReview = res?.data?.OwnerReview;
       this.walkerReview = res?.data?.WalkerReview;
       this.titleService.headerTitle = 'Walkers';
+      this.titleService.headerListTitle = 'Walker';
       this.commonService.walkerActive = true;
       this.titleService.toggleTitle=true; 
       this.lat  = res?.data?.WalkerData.Lat;
