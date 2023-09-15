@@ -1,16 +1,16 @@
-import { Component, Input } from '@angular/core';
-import { OwnersService } from '../owners.service';
-import { TitleService } from 'src/app/core/services/title.service';
-import { CommonService } from 'src/app/shared/services/common.service';
-import { owners, ownersList } from './owners.model';
+import { Component, Input } from "@angular/core";
+import { OwnersService } from "../owners.service";
+import { TitleService } from "src/app/core/services/title.service";
+import { CommonService } from "src/app/shared/services/common.service";
+import { owners, ownersList } from "./owners.model";
 
 @Component({
-  selector: 'app-owners',
-  templateUrl: './owners.component.html',
-  styleUrls: ['./owners.component.css'],
+  selector: "app-owners",
+  templateUrl: "./owners.component.html",
+  styleUrls: ["./owners.component.css"],
 })
 export class OwnersComponent {
-  public ownerList: ownersList | undefined
+  public ownerList: ownersList | undefined;
   ownerCall: boolean = true;
   constructor(
     private ownersService: OwnersService,
@@ -24,7 +24,7 @@ export class OwnersComponent {
   getTotalOwners() {
     this.ownersService.getOwners().subscribe((res: owners) => {
       this.ownerList = res?.data?.totalOwners;
-      this.titleService.headerTitle = 'Owners';
+      this.titleService.headerTitle = "Owners";
       this.titleService.titleDashboard = false;
       this.titleService.binddata.next(false);
       this.commonService.disableUserJobDetails = true;

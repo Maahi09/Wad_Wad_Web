@@ -32,18 +32,15 @@
                 class="me-2 mb-1">Pet’s Behaviors</h5>
         <div class="pet-behaviour row ">
             <div class="col-11 mt-1">
-                <div class="behaviour-title mt-3 d-flex align-items-center" *ngFor="let data of petBehaviour | keyvalue">{{data.key}}<span class="line ms-3 me-2"></span></div>
+                <div class="behaviour-title mt-3 d-flex align-items-center" *ngFor="let data of petBehaviour | keyvalue">{{data.key}}<span class="line ms-3 me-2 "></span></div>
             </div>
             <div class="col-1">
                 <div class="behaviour-value mt-3 text-end" *ngFor="let data of petBehaviour | keyvalue">
                         {{ data.value === 0 ? 'No' : (data.value === 1 ? 'Yes' : data.value) }}
                 </div>
-
-
-                
-                  
             </div>
         </div>
+        
     </div>
     <!-- Pet's Behaviour div ends -->
     <!-- Pet's Photos div starts -->

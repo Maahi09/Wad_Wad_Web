@@ -10,6 +10,7 @@ import { CommonService } from '../../services/common.service';
 export class UserDetailsUserJobDetailsComponent {
   public userId: number | undefined;
   isOwnerCall: boolean | undefined;
+  public subscription: any;
   constructor(private router: Router, public commonService: CommonService) {}
   ngOnInit() {
     this.getUserId();
@@ -31,7 +32,12 @@ export class UserDetailsUserJobDetailsComponent {
   }
   //method to get userId
   getUserId() {
-    this.commonService.userId.subscribe((res: any) => (this.userId = res));
+   this.subscription= this.commonService.userId.subscribe((res: any) => (this.userId = res));
     this.isOwnerCall = this.commonService.isOwnerCall;
+  }
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 }

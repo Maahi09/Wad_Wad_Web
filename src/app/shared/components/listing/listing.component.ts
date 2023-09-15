@@ -15,7 +15,8 @@ export class ListingComponent {
   @Input() displayDataFromParent: any;
   @Input() isOwnerCall: boolean = false;
   public displayList: any = [];
-  public noDataFound:boolean = false
+  public noDataFound:boolean = false;
+  public subscription: any;
   constructor(
     private router: Router,
     public titleService: TitleService,
@@ -40,7 +41,7 @@ export class ListingComponent {
 
   //method to bind SearchedData
   getSearchedData(){
-    this.commonService.searchData.subscribe((res:any)=>{this.displayList=res;
+    this.subscription= this.commonService.searchData.subscribe((res:any)=>{this.displayList=res;
       if(res.length===0){
 this.noDataFound = true
       }
@@ -48,5 +49,10 @@ this.noDataFound = true
         this.noDataFound = false
       }
     });
+  }
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 }

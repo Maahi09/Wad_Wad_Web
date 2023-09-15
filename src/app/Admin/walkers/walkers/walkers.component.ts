@@ -1,16 +1,16 @@
-import { Component } from '@angular/core';
-import { WalkersService } from '../walkers.service';
-import { TitleService } from 'src/app/core/services/title.service';
-import { CommonService } from 'src/app/shared/services/common.service';
-import { walkers, walkersList } from './walkers.model';
+import { Component } from "@angular/core";
+import { WalkersService } from "../walkers.service";
+import { TitleService } from "src/app/core/services/title.service";
+import { CommonService } from "src/app/shared/services/common.service";
+import { walkers, walkersList } from "./walkers.model";
 
 @Component({
-  selector: 'app-walkers',
-  templateUrl: './walkers.component.html',
-  styleUrls: ['./walkers.component.css'],
+  selector: "app-walkers",
+  templateUrl: "./walkers.component.html",
+  styleUrls: ["./walkers.component.css"],
 })
 export class WalkersComponent {
-  public walkersList: walkersList|undefined;
+  public walkersList: walkersList | undefined;
   constructor(
     private walkersService: WalkersService,
     private titleService: TitleService,
@@ -23,8 +23,8 @@ export class WalkersComponent {
   getTotalWalkers() {
     this.walkersService.getWalkers().subscribe((res: walkers) => {
       this.walkersList = res?.data?.totalWalkers;
-      this.titleService.headerTitle = 'Walkers';
-      this.titleService.headerListTitle = 'Walker';
+      this.titleService.headerTitle = "Walkers";
+      this.titleService.headerListTitle = "Walker";
       this.titleService.titleDashboard = false;
       this.titleService.toggleTitle = false;
       this.titleService.binddata.next(true);

@@ -2,7 +2,7 @@
 .wrapper{
     background-color:#ffff;
     border-radius: 20px   ;
-    padding: 27px 0px 0px 20px;
+    padding: 27px 0px 0px 0px;
 }
 .user-profile h6{
     font-size: 22px;
@@ -39,7 +39,7 @@ font-weight: 400;
     border-radius: 10px;
 }
 .dog-details-wrapper{
-    padding: 25px 20px 20px 0px;
+    padding: 25px 20px 20px 20px;
 }
 .dog-detail-btn{
     background-color: #F9F9F9;
@@ -78,7 +78,7 @@ color: #252525;
     color: #8F9BB3;
 }
 .walker-details-wrapper{
-    padding: 0px 20px 20px 0px;
+    padding: 0px 20px 20px 20px;
 }
 .prompts-completion{
     gap: 10px;
@@ -133,4 +133,7 @@ color: #8F9BB3;
 }
 .accordion-button {
     padding: 0px 15px 0px 15px;
+}
+.user-details{
+    padding-left: 20px;
 }

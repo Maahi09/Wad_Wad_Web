@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
-import { WalkersService } from '../walkers.service';
-import { TitleService } from 'src/app/core/services/title.service';
-import { ActivatedRoute } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { CommonService } from 'src/app/shared/services/common.service';
-import { totalJob } from './user-job-details.model';
+import { Component } from "@angular/core";
+import { WalkersService } from "../walkers.service";
+import { TitleService } from "src/app/core/services/title.service";
+import { ActivatedRoute } from "@angular/router";
+import { CommonModule } from "@angular/common";
+import { CommonService } from "src/app/shared/services/common.service";
+import { totalJob } from "./user-job-details.model";
 
 @Component({
-  selector: 'app-user-job-details',
-  templateUrl: './user-job-details.component.html',
-  styleUrls: ['./user-job-details.component.css'],
+  selector: "app-user-job-details",
+  templateUrl: "./user-job-details.component.html",
+  styleUrls: ["./user-job-details.component.css"],
 })
 export class UserJobDetailsComponent {
   public totalJobs: any;
@@ -22,8 +22,8 @@ export class UserJobDetailsComponent {
     private activatedRoute: ActivatedRoute
   ) {}
   ngOnInit() {
-    this.userId = this.activatedRoute.snapshot.paramMap.get('id');
-    this.isOwnerCall = this.activatedRoute.snapshot.paramMap.get('isOwnerCall');
+    this.userId = this.activatedRoute.snapshot.paramMap.get("id");
+    this.isOwnerCall = this.activatedRoute.snapshot.paramMap.get("isOwnerCall");
     this.getTotalJobs();
     this.sendUserId();
   }
@@ -35,8 +35,8 @@ export class UserJobDetailsComponent {
       this.commonService.walkerActive = true;
       this.walkersService.totalJobDetails.next(this.totalJobs);
       this.commonService.isActive = false;
-      this.titleService.headerTitle = 'Walkers';
-      this.titleService.headerListTitle = 'Walker';
+      this.titleService.headerTitle = "Walkers";
+      this.titleService.headerListTitle = "Walker";
     });
   }
   // method to send userId and isOwnerCall
