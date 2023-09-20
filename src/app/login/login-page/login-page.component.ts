@@ -44,9 +44,5 @@ export class LoginPageComponent {
   preloadImage() {
     const img = new Image();
     img.src = "assets/images/loginPageImg.svg";
-    img.onload = () => {
-      // This code will execute after the image has finished preloading
-      console.log('Image preloaded!');
-    };
   }
 }
