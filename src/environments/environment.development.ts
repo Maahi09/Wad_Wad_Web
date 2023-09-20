@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    BASE_URL:'https://b593-2405-201-2014-31ae-10f5-b310-5074-81b3.ngrok-free.app/'
+    BASE_URL:'https://28c2-2405-201-2014-31ae-e9b9-36f9-e754-dd2d.ngrok-free.app/'
 }

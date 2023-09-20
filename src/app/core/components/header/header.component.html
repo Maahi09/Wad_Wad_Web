@@ -5,11 +5,11 @@
             <p class="dasboard-sub-heading" *ngIf="titleService.titleDashboard">Welcome, {{loggedUser}}!</p>
         </div>
         <div class="d-flex align-items-center" *ngIf="titleService.toggleTitle">
-                <div class="back-arrow"> 
-                    <button class="border-0 back-btn">
-                        <img src="assets/images/Arrow---Left.svg" alt="" (click)="navigateToList()">
+                <!-- <div class="" >  -->
+                    <button class="border-0 back-btn back-arrow" (click)="navigateToList()">
+                        <img src="assets/images/Arrow---Left.svg" alt="" >
                     </button>
-            </div>
+            <!-- </div> -->
             <div class="ms-2">{{titleService.headerListTitle}} List</div>
         </div>
         <div class="d-flex align-items-center">

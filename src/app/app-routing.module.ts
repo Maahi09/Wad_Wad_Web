@@ -7,9 +7,6 @@ import { UserDetailsUserJobDetailsComponent } from './shared/components/user-det
 import { UserJobDetailsComponent } from './Admin/walkers/user-job-details/user-job-details.component';
 import { JobDetailsComponent } from './Admin/walkers/job-details/job-details.component';
 import { AuthGuard } from './core/services/guard/auth.guard';
-import { PetDetailsComponent } from './shared/components/pet-details/pet-details.component';
-
-
 
 const routes: Routes = [
   {

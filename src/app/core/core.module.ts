@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { MasterComponent } from './components/master/master.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { NgbModule, NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -20,7 +21,10 @@ import { NgbModule, NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     RouterModule,
     NgbModule,
-    NgbPopoverModule
+    NgbPopoverModule,
+    ToastrModule.forRoot({
+      preventDuplicates:true
+    }),
   ]
 })
 export class CoreModule { }

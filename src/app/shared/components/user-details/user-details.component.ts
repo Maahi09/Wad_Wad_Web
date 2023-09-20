@@ -28,6 +28,8 @@ export class UserDetailsComponent {
   public dogDetails: boolean = false;
   public isOwnerCall: any;
   public petId: number | undefined;
+  userDetails: any;
+  updatedUserDetails: any;
   constructor(
     private commonService: CommonService,
     private ownersService: OwnersService,
@@ -62,11 +64,11 @@ export class UserDetailsComponent {
     this.ownersService
       .getOwnerDetails(this.userId)
       .subscribe((res: ownerDetails) => {
-        this.ownerDetails = res.data?.UserDetails;
-        this.updatedOwnerDetails = { ...this.ownerDetails };
-        delete this.updatedOwnerDetails.Name;
-        delete this.updatedOwnerDetails?.Profile;
-        delete this.updatedOwnerDetails?.userId;
+        this.userDetails = res.data?.UserDetails;
+        this.updatedUserDetails = { ...this.userDetails };
+        delete this.updatedUserDetails.Name;
+        delete this.updatedUserDetails?.Profile;
+        delete this.updatedUserDetails?.userId;
         this.petDetails = res.data?.petsDetails;
         this.bindUserDetails = true;
         this.walkersDetails = false;
@@ -74,6 +76,7 @@ export class UserDetailsComponent {
         this.ownerDogsDetails = true;
         this.titleService.toggleTitle = true;
         this.titleService.headerTitle = 'Owners';
+        this.titleService.headerListTitle = 'Owner';
         this.commonService.ownerActive = true;
         this.commonService.disableUserJobDetails = true;
       });
@@ -84,14 +87,14 @@ export class UserDetailsComponent {
       .getWalkerDetails(this.userId)
       .subscribe((res: walkerDetails) => {
         this.walkerPromptDetails = res.data?.promptDetails;
-        this.walkersDetailedData = res.data?.UserDetails;
-        this.updatedWalkerDetails = { ...this.walkersDetailedData };
-        delete this.updatedWalkerDetails.Name;
-        delete this.updatedWalkerDetails?.Profile;
-        delete this.updatedWalkerDetails.AboutSelf;
-        delete this.updatedWalkerDetails.IdCardImage;
-        delete this.updatedWalkerDetails.Images;
-        delete this.updatedWalkerDetails.userId;
+        this.userDetails = res.data?.UserDetails;
+        this.updatedUserDetails = { ...this.userDetails};
+        delete this.updatedUserDetails.Name;
+        delete this.updatedUserDetails?.Profile;
+        delete this.updatedUserDetails.AboutSelf;
+        delete this.updatedUserDetails.IdCardImage;
+        delete this.updatedUserDetails.Images;
+        delete this.updatedUserDetails.userId;
         this.bindUserDetails = false;
         this.walkersDetails = true;
         this.walkersProfile = true;
@@ -105,19 +108,19 @@ export class UserDetailsComponent {
       });
   }
   //method for binding walker and owner details based on condition
-  get userDetails() {
-    if (this.bindUserDetails == true) {
-      return this.ownerDetails;
-    } else {
-      return this.walkersDetailedData;
-    }
-  }
-  //method for binding walker and owner details based on condition
-  get updatedUserDetails() {
-    if (this.bindUserDetails == true) {
-      return this.updatedOwnerDetails;
-    } else {
-      return this.updatedWalkerDetails;
-    }
-  }
+  // get userDetails() {
+  //   if (this.bindUserDetails == true) {
+  //     return this.ownerDetails;
+  //   } else {
+  //     return this.walkersDetailedData;
+  //   }
+  // }
+  // //method for binding walker and owner details based on condition
+  // get updatedUserDetails() {
+  //   if (this.bindUserDetails == true) {
+  //     return this.updatedOwnerDetails;
+  //   } else {
+  //     return this.updatedWalkerDetails;
+  //   }
+  // }
 }
