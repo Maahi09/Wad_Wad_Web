@@ -12,8 +12,13 @@
   .body {
     font-family: "Poppins", sans-serif;
   }
+  :host{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
   .wrapper{
-    height: 735px;
+    flex-grow: 1;
     background-color: #ffff;
     border-radius: 20px; 
 }

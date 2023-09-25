@@ -1,36 +1,30 @@
 <div class="card" (click)="openJobInDetail(walkerJobDetails.jobId)">
-<!-- Date and Ratings -->
-<div class="d-flex  justify-content-between">
-    <div class=" date"><i class="fa-solid fa-circle-dot me-2"></i>{{walkerJobDetails.CreatedAt}}</div>
-    <div>
-        <ngb-rating  [rate]="walkerJobDetails.ownerRate" [max]="5" [readonly]="true">
-            <ng-template let-fill="fill" >
-              <span [class.filled]="fill === 100" [class.notfilled]="fill === 0">
-                <i class="fa-solid fa-star"></i>
-              </span>
-            </ng-template>
-          </ngb-rating>
+    <!-- Date and Ratings -->
+    <div class="d-flex  justify-content-between">
+        <div class=" date"><i class="fa-solid fa-circle-dot me-2"></i>{{walkerJobDetails.CreatedAt}}</div>
+        <div>
+            <ngb-rating [rate]="walkerJobDetails.ownerRate" [max]="5" [readonly]="true">
+                <ng-template let-fill="fill">
+                    <span [class.filled]="fill === 100" [class.notfilled]="fill === 0">
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                </ng-template>
+            </ngb-rating>
+        </div>
     </div>
-</div>
-<!-- Date and Ratings -->
-<!-- Decription div -->
-<div class="row description">
-    <div class="col-4 name">
-        <div class="mt-3" *ngFor="let item of updatedWalkerJobDetails | keyvalue ">
-                {{item.key}}:
-            </div>
-        
+    <!-- Date and Ratings -->
+    <!-- Decription div -->
+    <div class="row description">
+        <ng-container *ngFor="let item of updatedWalkerJobDetails | keyvalue ">
+            <div class="col-4 mt-3 name">{{ item.key }} :</div>
+            <div class="col-8 mt-3 value">{{ item.value }} </div>
+        </ng-container>
     </div>
-    <div class="col-8 value">
-        <div class="mt-3" *ngFor="let item of updatedWalkerJobDetails | keyvalue ">{{item.value}}</div>
-        
+    <!-- Decription div -->
+    <!-- Review div -->
+    <div class="review mt-4">
+        <h5>Review</h5>
+        <p>{{walkerJobDetails.ownerReview===null ? '-' : walkerJobDetails.ownerReview }}</p>
     </div>
-</div>
-<!-- Decription div -->
-<!-- Review div -->
-<div class="review mt-4">
-    <h5>Review</h5>
-    <p>{{walkerJobDetails.ownerReview}}</p>
-</div>
-<!-- Review div -->
+    <!-- Review div -->
 </div>

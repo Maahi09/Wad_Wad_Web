@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'WAD_WAD';
+  ngOnInit() {
+    this.preloadImage();
+  }
+  preloadImage() {
+    const img = new Image();
+    img.src = "assets/images/loginPageImg.svg";
+  }
 }

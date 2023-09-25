@@ -11,18 +11,20 @@ import { CommonService } from "src/app/shared/services/common.service";
   styleUrls: ["./login-page.component.css"],
 })
 export class LoginPageComponent {
+  public visible: boolean = true;
+  public changeType: boolean = true;
+  public submitted:boolean = false
   constructor(
     private router: Router,
     private loginService: LoginService,
     private authService: AuthService
   ) {
-    this.preloadImage();
+    // this.preloadImage();
   }
-  public visible: boolean = true;
-  public changeType: boolean = true;
   form: NgForm | undefined;
   //method for submitting login data
   submitLoginData(loginData: any) {
+    this.submitted = true
     if (loginData.valid) {
       const loginUserData = {
         email: loginData.value.username,
@@ -41,8 +43,11 @@ export class LoginPageComponent {
     this.changeType = !this.changeType;
   }
   //preload image
-  preloadImage() {
-    const img = new Image();
-    img.src = "assets/images/loginPageImg.svg";
-  }
+  // preloadImage() {
+  //   const img = new Image();
+  //   img.src = "assets/images/loginPageImg.svg";
+  //   img.onload = () => {
+  //     console.log('Image preloaded!');
+  //   };
+  // }
 }

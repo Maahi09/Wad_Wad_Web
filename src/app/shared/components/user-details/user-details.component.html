@@ -20,14 +20,11 @@
                     <h5 class="user-details-title"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow"
                             class="me-2 mb-1">User Details
                     </h5>
-    
                     <div class="row">
-                        <div class="col-3">
-                            <div class="data-name" *ngFor="let item of updatedUserDetails | keyvalue">{{item.key}}</div>
-                        </div>
-                        <div class="col-9">
-                            <div class="data-value" *ngFor="let item of updatedUserDetails | keyvalue">{{item.value}}</div>
-                        </div>
+                        <ng-container *ngFor="let item of updatedUserDetails | keyvalue">
+                            <div class="col-3 data-name">{{ item.key }}</div>
+                            <div class="col-9 data-value">{{ item.value }} </div>
+                        </ng-container>
                     </div>
                 </div>
                 <!-- For user details -->
@@ -37,23 +34,24 @@
                         <h5 class="mb-3 reports-title"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow"
                                 class="me-2 mb-1">Reason for Report
                         </h5>
-                        <p>Lorem ipsum dolor sit amet consectetur. Dolor nullam accumsan amet mauris consectetur sed nisi.
+                        <p>Lorem ipsum dolor sit amet consectetur. Dolor nullam accumsan amet mauris consectetur sed
+                            nisi.
                             Sed nullam magnis arcu magna sed condimentum adipiscing at.</p>
                     </div>
-    
                 </div>
                 <!-- Only for Report details -->
             </div>
-    
             <div class="col-6 ">
                 <!--Only for Walker-details -->
                 <div class="walker-details" *ngIf="walkersDetails">
                     <div class="mt-2">
-                        <h5><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">Description</h5>
+                        <h5><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">Description
+                        </h5>
                         <p>{{userDetails?.AboutSelf}}</p>
                     </div>
                     <div class="mt-5">
-                        <h5><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">User Id Card</h5>
+                        <h5><img src="assets/images/Arrow - Down .svg" alt="Down Arrow" class="me-2 mb-1">User Id Card
+                        </h5>
                         <img src="{{userDetails?.IdCardImage}}" alt="Walker Id Card" class="mt-3 walker-id-card">
                     </div>
                 </div>
@@ -74,7 +72,7 @@
                         <h5 class="user-details-title"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow"
                                 class="me-2 mb-1">User Details
                         </h5>
-    
+
                         <div class="row">
                             <div class="col-3">
                                 <div class="data-name">Email</div>
@@ -100,18 +98,15 @@
                         <h5 class="mb-3 reports-title"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow"
                                 class="me-2 mb-1">Description
                         </h5>
-                        <p>Lorem ipsum dolor sit amet consectetur. Dolor nullam accumsan amet mauris consectetur sed nisi.
+                        <p>Lorem ipsum dolor sit amet consectetur. Dolor nullam accumsan amet mauris consectetur sed
+                            nisi.
                             Sed nullam magnis arcu magna sed condimentum adipiscing at.</p>
                     </div>
-    
                     <!-- reported by Description -->
                 </div>
                 <!-- Reports details -->
-    
             </div>
         </div>
-       
-
     </section>
     <!-- User-Details section ends -->
     <!-- Pet-Details section starts -->
@@ -131,7 +126,6 @@
                         </div>
                     </button>
                 </div>
-
                 <div ngbAccordionCollapse>
                     <div ngbAccordionBody>
                         <ng-template>
@@ -153,7 +147,6 @@
                     <img src="{{img}}" alt="" class=" walker-imgs">
                 </div>
             </div>
-
         </div>
         <!-- User-photos only for walker -->
         <!-- User Prompts and Completions -->
@@ -179,8 +172,5 @@
         <!-- User Prompts and Completions -->
     </section>
     <!-- Walker-details -->
-
-
-
 </section>
 <!-- Wrapper ends -->

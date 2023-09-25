@@ -33,15 +33,18 @@
                 <!-- Password -->
                 <!-- checkbox -->
                 <div class="mt-4 checkbox-inputfield">
-                    <input type="checkbox" id="confirmation" class="input-checkbox" ngModel required name="confirmation">
+                    <input type="checkbox" id="confirmation" class="input-checkbox" ngModel required name="confirmation" #confirmation="ngModel">
                     <label for="confirmation">
                         Remember me
                     </label>
+                    <div *ngIf=  "submitted && confirmation?.invalid "  class="text-danger error-msg">
+                        required
+                      </div>
                 </div>
                 <!-- checkbox -->
                 <!-- submit button -->
                 <div class="login-btn-grp">
-                    <button type="submit"class="login-btn" [disabled]="loginForm.invalid">Login<i class="fa-solid fa-angle-right ms-1" ></i></button>
+                    <button type="submit"class="login-btn" >Login<i class="fa-solid fa-angle-right ms-1" ></i></button>
                 </div>
                 <!-- submit button -->
             </form>

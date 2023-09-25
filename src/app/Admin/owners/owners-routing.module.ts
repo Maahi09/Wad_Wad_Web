@@ -7,10 +7,7 @@ import { UserDetailsComponent } from 'src/app/shared/components/user-details/use
 const routes: Routes = [
   {
    path:'', component:OwnersComponent
-  },
-  // {
-  //   path:'owners/user-details' ,component:UserDetailsComponent
-  // }
+  }
 ];
 
 @NgModule({

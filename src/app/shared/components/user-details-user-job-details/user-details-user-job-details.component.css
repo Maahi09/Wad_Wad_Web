@@ -6,7 +6,8 @@
 }
 .wrapper{
     background-color:#ffff;
-    border-radius: 20px   ;
+    border-radius: 20px;
+    flex-grow: 1;
 }
 .details-heading{
     gap: 40px;
