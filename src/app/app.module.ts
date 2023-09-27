@@ -11,6 +11,7 @@ import { AuthInterceptor } from './core/services/interceptor/auth.interceptor';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { UserDetailsComponent } from './shared/components/user-details/user-details.component';
 
 
 

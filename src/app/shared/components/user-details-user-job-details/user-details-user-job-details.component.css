@@ -18,10 +18,10 @@
     overflow: auto;
     overflow-x: hidden;
 }
-.active {
+/* .active {
     color:#FD7E4A;
     border-bottom: 2px solid #FD7E4A;
-}
+} */
 .links{
     color:#8F9BB3;
     font-size:16px;

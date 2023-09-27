@@ -107,20 +107,4 @@ export class UserDetailsComponent {
         this.commonService.walkerActive = true;
       });
   }
-  //method for binding walker and owner details based on condition
-  // get userDetails() {
-  //   if (this.bindUserDetails == true) {
-  //     return this.ownerDetails;
-  //   } else {
-  //     return this.walkersDetailedData;
-  //   }
-  // }
-  // //method for binding walker and owner details based on condition
-  // get updatedUserDetails() {
-  //   if (this.bindUserDetails == true) {
-  //     return this.updatedOwnerDetails;
-  //   } else {
-  //     return this.updatedWalkerDetails;
-  //   }
-  // }
 }

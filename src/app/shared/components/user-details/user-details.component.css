@@ -108,6 +108,9 @@ color: #8F9BB3;
     width: 190px;
     border-radius: 10px;
 }
+.userdetails-container{
+    padding-left: 10px;
+}
 .accordion-item {
     border: none
 }
@@ -120,10 +123,10 @@ color: #8F9BB3;
 .accordion-button:not(.collapsed) {
     box-shadow: none;
 }
-.accordion-item:first-of-type .accordion-button {
+.accordion-button{
     border-radius: 10px;
 }
-.accordion-item:last-of-type .accordion-button.collapsed {
+.accordion-button.collapsed {
     border-radius: 10px;
 }
 .accordion-button:focus {

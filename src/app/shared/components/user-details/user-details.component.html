@@ -20,10 +20,10 @@
                     <h5 class="user-details-title"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow"
                             class="me-2 mb-1">User Details
                     </h5>
-                    <div class="row">
+                    <div class="row userdetails-container">
                         <ng-container *ngFor="let item of updatedUserDetails | keyvalue">
-                            <div class="col-3 data-name">{{ item.key }}</div>
-                            <div class="col-9 data-value">{{ item.value }} </div>
+                            <div class="col-2 data-name">{{ item.key }}</div>
+                            <div class="col-10 data-value">{{ item.value }} </div>
                         </ng-container>
                     </div>
                 </div>
