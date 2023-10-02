@@ -17,25 +17,25 @@ body {
   overflow-y: hidden;
 }
 .img-container {
-  background-image: url("src/assets/images/loginPageImg.svg");
+  /* background-image: url("src/assets/images/loginPageImg.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  /* position: relative;
+  background-position: center; */
+  position: relative;
   display: flex;
-  flex-direction: column; */
+  flex-direction: column;
 }
-/* .login-page-img{
+.login-page-img{
 position: absolute;
 flex-grow: 1;
 width: 1000px;
-} */
+transform: translate(0px,-60px)
+}
 .login-page-logo {
-  transform: translate(35px,35px);
-  /* position: absolute;
+  /* transform: translate(35px,35px); */
+  position: absolute;
   top: 35px;
-  left: 35px; */
-
+  left: 35px;
 }
 .form-wrapper {
   display: flex;
