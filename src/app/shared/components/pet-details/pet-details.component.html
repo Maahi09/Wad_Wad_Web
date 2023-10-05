@@ -1,24 +1,16 @@
 <!-- dog-details wrapper starts -->
 <section class="dog-details-wrapper">
     <!-- Pet Details and description div starts -->
-    <div class="row mt-4 mb-5">
+    <div class="row mt-4">
         <!-- Pet Details -->
         <div class="col-6">
             <h5 class="pet-details-heading"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow"
                     class="me-2 mb-1">Pet’s Details</h5>
-
             <div class="row">
-<ng-container *ngFor="let data of petDetails | keyvalue">
-    <div class="col-2 detail-title">{{data.key}}</div>
-    <div class="col-10 detail-value">{{data.value}}</div>
-</ng-container>
-                
-                <!-- <div class="col-3">
-                    <div class="detail-title" *ngFor="let data of petDetails | keyvalue">{{data.key}} </div>
-                </div>
-                <div class="col-9">
-                    <div class="detail-value" *ngFor="let data of petDetails | keyvalue">{{data.value}}</div>
-                </div> -->
+                <ng-container *ngFor="let data of petDetails | keyvalue">
+                    <div class="col-2 detail-title">{{data.key}}</div>
+                    <div class="col-10 detail-value">{{data.value}}</div>
+                </ng-container>
             </div>
         </div>
         <!-- Pet Details -->
@@ -32,20 +24,21 @@
     </div>
     <!-- Pet Details and description div ends -->
     <!-- Pet's Behaviour div starts -->
-    <div class="mb-5">
+    <div class="mb-5 pets-behaviour">
         <h5 class="pet-details-heading "><img src="assets/images/Arrow - Down .svg" alt="Down Arrow"
                 class="me-2 mb-1">Pet’s Behaviors</h5>
         <div class="pet-behaviour row ">
             <div class="col-11 mt-1">
-                <div class="behaviour-title mt-3 d-flex align-items-center" *ngFor="let data of petBehaviour | keyvalue">{{data.key}}<span class="line ms-3 me-2 "></span></div>
+                <div class="behaviour-title mt-3 d-flex align-items-center"
+                    *ngFor="let data of petBehaviour | keyvalue">{{data.key}}<span class="line ms-3 me-2 "></span></div>
             </div>
             <div class="col-1">
                 <div class="behaviour-value mt-3 text-end" *ngFor="let data of petBehaviour | keyvalue">
-                        {{ data.value === 0 ? 'No' : (data.value === 1 ? 'Yes' : data.value) }}
+                    {{ data.value === 0 ? 'No' : (data.value === 1 ? 'Yes' : data.value) }}
                 </div>
             </div>
         </div>
-        
+
     </div>
     <!-- Pet's Behaviour div ends -->
     <!-- Pet's Photos div starts -->

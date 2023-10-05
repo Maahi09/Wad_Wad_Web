@@ -69,7 +69,9 @@ color: #8F9BB3;
     border-radius: 10px;
 }
 
-
+.pets-behaviour{
+    margin-top: 55px;
+}
 .line{
     height: 1px;
     width: 100%;

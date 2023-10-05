@@ -4,6 +4,7 @@
     </h6>
     <div class="table-wrapper">
         <table class="table">
+            
             <thead class="table-head">
             <th class="data-titles">No</th>
             <th class="data-titles">User Name</th>
@@ -11,6 +12,7 @@
             <th class="data-titles">Phone Number</th>
             </thead>
             <tbody *ngIf="!noDataFound">
+                
                 <tr *ngFor="let data of displayList ;let i=index ">
                     <td class="table-data" (click)="openUserDetails(data.userId)">{{i+1}}</td>
                     <td class="table-data" (click)="openUserDetails(data.userId)">
@@ -18,7 +20,7 @@
                         {{data.firstName + data.lastName}}</td>
                     <td class="table-data" (click)="openUserDetails(data.userId)">{{data.email}}</td>
                     <td class="table-data" (click)="openUserDetails(data.userId)">{{data.phoneNumber}}</td>
-                    <td class="table-data">
+                    <td class="table-data text-end">
                     <button type="button" class="details-btn">
                         <img src="assets/images/table-last-column.png" alt="" (click)="openUserDetails(data.userId)">
                     </button>

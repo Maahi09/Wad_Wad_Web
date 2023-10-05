@@ -120,9 +120,6 @@
                                 <!-- <img src="assets/images/dog-bruno.svg" alt="Bruno Profile Image"> -->
                                 <span class="dog-name">{{dog.Name}}</span>
                             </div>
-                            <!-- <div>
-                            <button ngbAccordionButton (click)="openDogDetails(dog?.PetId)"  class="dog-detail-btn"></button>
-                        </div> -->
                         </div>
                     </button>
                 </div>
@@ -155,11 +152,6 @@
                 Completions</h5>
             <div class="mt-4 d-flex align-items-center flex-wrap prompts-completion">
                 <div class="user-prompts-completion me-2" *ngFor=" let data of walkerPromptDetails">
-                    <!-- <div class="d-flex align-items-center justify-content-around"> -->
-                    <!-- <div *ngFor="let item of data | keyvalue">
-                        <h6> {{item.key}}</h6>
-                        <p class="mt-2">{{item.value}}</p>
-                    </div> -->
                     <div>
                         <h6> {{data.promptsTitle}}</h6>
                         <p class="mb-0">{{data.PromptAnswer}}</p>

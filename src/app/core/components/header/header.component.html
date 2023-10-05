@@ -2,7 +2,7 @@
     <header class="header-container">
         <div *ngIf="!titleService.toggleTitle">
             <h2 class="dasboard-heading">{{titleService.headerTitle}}</h2> 
-            <p class="dasboard-sub-heading" *ngIf="titleService.titleDashboard">Welcome, {{loggedUser}}!</p>
+            <p class="dasboard-sub-heading mt-1" *ngIf="titleService.titleDashboard">Welcome, {{loggedUser}}!</p>
         </div>
         <div class="d-flex align-items-center" *ngIf="titleService.toggleTitle">
                 <!-- <div class="" >  -->
