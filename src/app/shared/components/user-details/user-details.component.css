@@ -140,3 +140,7 @@ color: #8F9BB3;
 .user-details{
     padding-left: 20px;
 }
+.accordion-body{
+    padding: 0 0 0px 0;
+    transform: translate(0px, -20px);
+}

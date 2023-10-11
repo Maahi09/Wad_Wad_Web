@@ -41,7 +41,9 @@ font-weight:400 ;
 }
 .behaviour-title{
 color:#252525 ;
-
+}
+.behaviour-value {
+    text-wrap: nowrap;
 }
 .behaviour-value{
 color: #8F9BB3;
@@ -79,4 +81,6 @@ color: #8F9BB3;
 
     display: inline-block;
 }
-
+.pet-prompts-completion:last-child{
+    margin-bottom: 0;
+    }

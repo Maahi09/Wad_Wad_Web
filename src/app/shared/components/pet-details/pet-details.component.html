@@ -25,20 +25,15 @@
     <!-- Pet Details and description div ends -->
     <!-- Pet's Behaviour div starts -->
     <div class="mb-5 pets-behaviour">
-        <h5 class="pet-details-heading "><img src="assets/images/Arrow - Down .svg" alt="Down Arrow"
-                class="me-2 mb-1">Pet’s Behaviors</h5>
-        <div class="pet-behaviour row ">
-            <div class="col-11 mt-1">
-                <div class="behaviour-title mt-3 d-flex align-items-center"
-                    *ngFor="let data of petBehaviour | keyvalue">{{data.key}}<span class="line ms-3 me-2 "></span></div>
-            </div>
-            <div class="col-1">
-                <div class="behaviour-value mt-3 text-end" *ngFor="let data of petBehaviour | keyvalue">
-                    {{ data.value === 0 ? 'No' : (data.value === 1 ? 'Yes' : data.value) }}
-                </div>
+        <h5 class="pet-details-heading mb-4"><img src="assets/images/Arrow - Down .svg" alt="Down Arrow">Pet’s Behaviors
+        </h5>
+        <div class="pet-behaviour">
+            <div class=" mt-3 d-flex align-items-center" *ngFor="let data of petBehaviour | keyvalue">
+                <span class="behaviour-title">{{data.key}}</span>
+                <span class="line ms-3 me-3"></span>
+                <span class="behaviour-value ">{{ data.value === 0 ? 'No' : (data.value === 1 ? 'Yes' : data.value)}}</span>
             </div>
         </div>
-
     </div>
     <!-- Pet's Behaviour div ends -->
     <!-- Pet's Photos div starts -->
